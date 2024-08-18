@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang=""en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comaptible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/rand.css" rel="stylesheet">
+
+    <title>Japanese Cuisine</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content{
+        text-align: center;
+    }
+    .content h1{
+        font-size: 95px;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+    .content a{
+        font-size: 23px;
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid #fff;
+        padding: 15px 25p;
+        border-radius: 50px;
+        transition: 03s;
+    }
+    .content a:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    .background-clip{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+        @media (min-aspect-ratio:16/9) {
+        .background-clip{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-aspect-ratio:16/9) {
+        .background-clip{
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    /* Clear floats after image containers */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .row {
+        display: flex;
+        margin: 5%;
+        border-radius: 15px;
+        background-color: aquamarine;
+    }
+
+    .column {
+        flex: 33.33%;
+        padding: 40px;
+        text-align: center;
+        
+    }
+
+    .nothing {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+
+    .nothing {
+        flex: 33.33%;
+        padding: 40px;
+        
+    }
+
+
+
+    .column {
+        transition: all 0.3s ease-in;
+    }
+    .column:hover {
+        transform: scale3d(1.2,1.2,5);
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <!-- website icon and search -->
+        <div class="header-1">
+            <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Foodtopia</a>
+            <i class="fas fa-search" id="search-icon"></i>
+            <form action="" id="search-form">
+                <input type="search" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+                <i class="fas fa-times" id="close"></i>
+            </form>
+        </div>
+    
+        <!-- navigation bar and social media plug ins -->
+        <div class="header-2">
+            <div id="menu" class="fas fa-hamburger"></div>
+    
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="myfood.html">Malaysian</a></li>
+                    <li><a href="thai.html">Thai</a></li>
+                    <li><a class="active" href="japanesefood.html">Japanese</a></li>
+                    <li><a href="korean.html">Korean</a></li>
+                    <li><a href="vietnam.html">Vietnamese</a></li>
+                    <li><a href="western.html">Western</a></li>
+                    <li><a href="random.html">Daily Suggestion</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a id="login-link" href="login.html">Login</a></li> 
+                </ul>
+            </nav>
+    
+            <class class="share">
+                <a href="https://www.facebook.com/FoodNetwork/" class="fab fa-facebook-f"></a>
+                <a href="mailto:josephlyzh@1utar.my" class="fas fa-envelope"></a>
+                <a href="https://www.instagram.com/FoodNetwork/" class="fab fa-instagram"></a>
+            </class>
+        </div>
+    </header>
+    
+
+    <div class="container">
+
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="images/sushiseafoodcommercial.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+        <h1>Japanese Food</h1>
+        <a href="#one">Explore Now</a>
+        <br>
+        <br>
+        </div>
+    </div>
+    
+
+<div style="text-align:center; color: darkorange; background:rgba(128,128,128,0.532); margin: 50px;  border-radius: 25px; background-color: rgba(128,128,128,0.532); margin: 120px; border-radius:25px;">
+    <br>
+    <br>
+    <br>
+    Japanese cuisine is renowned for its balance of flavors, meticulous preparation, and stunning <br>
+    presentation. Rooted in centuries-old traditions, it emphasizes fresh, seasonal ingredients and <br>
+    reflects a deep connection to nature. From the simplicity of sushi to the hearty comfort of ramen, <br>
+    Japanese food offers a diverse culinary experience that has captivated people around the globe.<br>
+    <br>
+    <br>
+    <br>
+</div>
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column" id="one">
+        <img src="images/sushi.jpeg" alt="Sushi" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Sushi</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Sushi is a Japanese dish of prepared vinegared rice, usually with some sugar and salt, plus a variety of ingredients, such as vegetables, and any meat, but most commonly seafood. Styles of sushi and its presentation vary widely, but the one key ingredient is "sushi rice", also referred to as shari, or sumeshi.
+            <br>
+            <br>
+            The creator of modern sushi is believed to be Hanaya Yohei, who invented nigiri-zushi, a type of sushi most known today, in which seafood is placed on hand-pressed vinegared rice, around 1824 in the Edo period (1603–1867). It was the fast food of the chōnin class in the Edo period.
+            <br>
+            <br>
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+    <div class="nothing">
+        
+        <p>
+            Ramen is a Japanese noodle dish. It consists of Chinese-style wheat noodles served in a broth; common flavors are soy sauce and miso, with typical toppings including sliced pork, nori, menma, and scallions. Ramen has its roots in Chinese noodle dishes and is a part of Japanese Chinese cuisine.
+            <br>
+            <br>
+            A wide variety of ramen exists in Japan, with geographical and vendor-specific differences even in varieties that share the same name. Usually varieties of ramen are differentiated by the type of broth and tare used. There are five components to a bowl of ramen: tare, aroma oil, broth, noodles and toppings.
+            <br>
+            <br>
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/ramen.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Ramen</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column">
+        <img src="images/tempura.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Tempura</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Tempura is a typical Japanese dish that usually consists of seafood and vegetables that have been coated in a thin batter and deep fried. Tempura has its origins dating back to the 16th century, when Portuguese Jesuits brought the Western-style cooking method of coating foods with flour and frying, via Nanban trade.
+            <br>
+            <br>
+            A light batter is made of iced water, eggs, and soft wheat flour (cake, pastry or all-purpose flour). Sometimes baking soda or baking powder is added to make the fritter light. Using sparkling water in place of plain water has a similar effect. Tempura batter is traditionally mixed in small batches using chopsticks for only a few seconds, leaving lumps in the mixture that, along with the cold batter temperature, result in a unique fluffy and crisp tempura structure when cooked. The batter is often kept cold by adding ice or placing the bowl inside a larger bowl with ice. Overmixing the batter will activate wheat gluten, which causes the flour mixture to become soft and dough-like when fried. 
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;"">
+
+    <div class="nothing">
+        
+        <p>
+            Sashimi is a Japanese delicacy consisting of fresh raw fish or meat sliced into thin pieces and often eaten with soy sauce.
+            <br>
+            <br>
+            There are hundreds of different types of kimchi made with different vegetables as the main ingredients.
+             Traditionally, winter kimchi, called gimjang, was stored in large earthenware fermentation vessels, called onggi,
+              in the ground to prevent freezing during the winter months and to keep it cool enough to slow down the
+               fermentation process during summer months. The vessels are also kept outdoors in special terraces
+                called jangdokdae. In contemporary times, household kimchi refrigerators are more commonly used.
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/sashimi.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Sashimi</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column">
+        <img src="images/takoyaki.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Takoyaki</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Takoyaki is a ball-shaped Japanese snack made of a wheat flour-based batter and cooked in a special molded pan. It is typically filled with minced or diced octopus, tempura scraps, pickled ginger, and green onion. 
+            The balls are brushed with takoyaki sauce (similar to Worcestershire sauce) and mayonnaise, and then sprinkled with green laver (aonori) and shavings of dried bonito (katsuobushi)
+            <br>
+            <br>
+            Yaki comes from yaku, which is one of the cooking methods in Japanese cuisine, meaning 'to grill',
+            and can be found in the names of other dishes in Japanese cuisine such as okonomiyaki and ikayaki (other
+             famous Osakan dishes). Typically, it is eaten as a snack or between meals, but in some areas it is
+              served as a side dish with rice. It is an example of konamono (konamon in the Kansai dialect), or flour-based Japanese cuisine. 
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+    <div class="nothing">
+        
+        <p>
+            Udon is a thick noodle made from wheat flour, used in Japanese cuisine. There is a variety of ways it is prepared and served. Its simplest form is in a soup as kake udon with a mild broth called kakejiru made from dashi, soy sauce, and mirin. It is usually topped with thinly chopped scallions. 
+            Other common toppings include prawn tempura, kakiage (mixed tempura fritter), abura-age (sweet, deep-fried tofu pouches), kamaboko (sliced fish cake), and shichimi spice added to taste.
+            <br>
+            <br>
+            Standard broth differs by region. Dark (koikuchi) soy sauce is added in eastern Japan, while light (usukuchi) soy sauce is added in the west. Instant noodles are often sold in two (or more) versions accordingly.
+            <br>
+            <br>
+            More unusual variants include stir-fried yaki udon and curry udon made with Japanese curry. It is often used in shabu shabu or Japanese hot pot. 
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/udon.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Udon</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column">
+        <img src="images/tonkatsu.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Tonkatsu</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Tonkatsu is a Japanese dish that consists of a breaded, deep-fried pork cutlet. It involves coating slices of pork with panko, and then frying them in oil. The two main types are fillet and loin. Tonkatsu is also the basis of other dishes such as katsukarē and katsudon.
+            <br>
+            <br>
+            Either a pork fillet or pork loin cut may be used; the meat is usually salted, peppered, dredged lightly in flour, dipped into beaten egg and then coated with panko (bread crumbs) before being deep fried.
+            <br>
+            <br>
+            Tonkatsu is then sliced into bits and served, commonly with shredded cabbage. It is most commonly eaten with a thick Worcestershire-style sauce called tonkatsu sauce or simply sōsu (sauce), karashi (mustard), and perhaps a slice of lemon. It is usually served with rice, miso soup and tsukemono and eaten with chopsticks. It may also be served with ponzu and grated daikon instead of tonkatsu sauce.
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+    <div class="nothing">
+        
+        <p>
+            Okonomiyaki is a Japanese teppanyaki, savory pancake dish consisting of wheat flour batter and other ingredients cooked on a teppan. Common additions include cabbage, meat, and seafood, and toppings include okonomiyaki sauce, aonori, katsuobushi, Japanese mayonnaise, and pickled ginger.
+            <br>
+            <br>
+            Okonomiyaki is mainly associated with two distinct variants from Hiroshima or the Kansai region of Japan, but is widely available throughout the country, with toppings and batters varying by area. The name is derived from the word okonomi, meaning "how you like" or "what you like", and yaki, meaning "grilled". It is an example of konamono (konamon in the Kansai dialect), or flour-based Japanese cuisine. 
+           
+            
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/okonomiyaki.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Okonomiyaki</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column">
+        <img src="images/yakitori.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Yakitori</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>
+            Yakitori is a Japanese type of skewered chicken. Its preparation involves attaching the meat to a skewer, typically made of steel, bamboo, or similar materials, after which it is grilled over a charcoal fire. During or after cooking, the meat is typically seasoned with tare sauce or salt.
+            <br>
+            <br>
+            Yakitori seasonings are primarily divided into two types: salty or salty-sweet. The salty type usually uses plain salt as its main seasoning. For the salty-sweet variety, tare, a special sauce consisting of mirin, sake, soy sauce, and sugar is used. Other common spices include powdered cayenne pepper, shichimi, Japanese pepper, black pepper, yuzu kosho and wasabi, according to one's tastes. 
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/japanbackground.png); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+    <div class="nothing">
+        
+        <p>
+            Miso soup is a traditional Japanese soup consisting of a dashi stock into which softened miso paste is mixed. In addition, there are many optional ingredients that may be added depending on regional and seasonal recipes, and personal preference. 
+            In Japanese food culture, miso soup is a representative of soup dishes served with rice. Miso soup is also called omiotsuke.
+            <br>
+            <br>
+            Along with suimono (clear soup seasoned with a small amount of soy sauce and salt in a dashi stock), miso soup is considered to be one of the two basic soup types of Japanese cuisine.
+            
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/miso.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Miso Soup</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div style="text-align:center; color: orangered; background:rgba(128,128,128,0.532); margin: 50px;  border-radius: 25px; background-color: rgba(128,128,128,0.532); margin: 120px; border-radius:25px;">
+    <br>
+    <br>
+    <br>
+    Japanese food is more than just a meal; it's a cultural expression that celebrates harmony, precision, <br>
+    and the beauty of simplicity. Whether enjoyed in a traditional setting or through modern <br>
+    interpretations, Japanese cuisine continues to enchant and inspire food lovers worldwide, making it a <br>
+    timeless and beloved part of global gastronomy.<br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3 class="heading"> <span>team members</span> </h3>
+            <a href="aboutus.html">Joseph Lau Yi Zhe</a>
+            <a href="aboutus.html">Tan Xin Sheng</a>
+            <a href="aboutus.html">Kok Tze Kang</a>
+            <a href="aboutus.html">Tan Hong Jie</a>
+        </div>
+
+
+        <div class="box">
+            <h3 class="heading"> <span>Acknowledgement</span> </h3>
+            <p class="copyRightCompany">Copyright © 2024 Footopia Sdn. Bhd. </p>
+        </div>
+
+        <div class="box">
+            <h3 class="heading" id=""contact> <span>contact us</span> </h3>
+            <p> <i class="fas fa-map-marker-alt"></i> 12A, Persiaran Mawar 1, Taman Tunas Jaya, 31350 Ipoh, Perak, Malaysia</p>
+            <p> <i class="fas fa-phone"></i> +6016-2208120 </p>
+        </div>
+
+        <div class="box">
+            <h3 class="heading"> <span>Location</span> </h3>
+            <iframe id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.094406034352!2d101.1150107752135!3d4.57706334271649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31caedcac129293f%3A0x264e470cd9c853f2!2s12%2C%20Persiaran%20Mawar%201%2C%20Kampung%20Sungai%20Rokam%2C%2031350%20Ipoh%2C%20Perak%2C%20Malaysia!5e0!3m2!1sen!2sin!4v1723972428049!5m2!1sen!2sin"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="aboutus.js"></script>
+
+
+</body>
+    
+</html>

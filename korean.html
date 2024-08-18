@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang=""en">
+<head>
+    <meta charset=""UTF-8">
+    <meta http-equiv=""X-UA-Comaptible" content=""IE-edge">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=""stylesheet" href=""style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/rand.css" rel="stylesheet">
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content{
+        text-align: center;
+    }
+    .content h1{
+        font-size: 95px;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+    .content a{
+        font-size: 23px;
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid #fff;
+        padding: 15px 25p;
+        border-radius: 50px;
+        transition: 03s;
+    }
+    .content a:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    .background-clip{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+        @media (min-aspect-ratio:16/9) {
+        .background-clip{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-aspect-ratio:16/9) {
+        .background-clip{
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    /* Clear floats after image containers */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .row {
+        display: flex;
+        margin: 5%;
+        border-radius: 15px;
+        background-color: aquamarine;
+    }
+
+    .column {
+        flex: 33.33%;
+        padding: 40px;
+        text-align: center;
+        
+    }
+
+    .nothing {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+
+    .nothing {
+        flex: 33.33%;
+        padding: 40px;
+        
+    }
+
+
+
+    .column {
+        transition: all 0.3s ease-in;
+    }
+    .column:hover {
+        transform: scale3d(1.2,1.2,5);
+    }
+
+    
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+   .hidden {
+    opacity: 0;
+    filter: bur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+
+    </style>
+
+    <script defer src="java2.js"></script>
+
+    
+</head>
+<body>
+
+    <header>
+        <!-- website icon and search -->
+        <div class="header-1">
+            <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Foodtopia</a>
+            <i class="fas fa-search" id="search-icon"></i>
+            <form action="" id="search-form">
+                <input type="search" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+                <i class="fas fa-times" id="close"></i>
+            </form>
+        </div>
+    
+        <!-- navigation bar and social media plug ins -->
+        <div class="header-2">
+            <div id="menu" class="fas fa-hamburger"></div>
+    
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="myfood.html">Malaysian</a></li>
+                    <li><a href="thai.html">Thai</a></li>
+                    <li><a href="japanesefood.html">Japanese</a></li>
+                    <li><a class="active" href="korean.html">Korean</a></li>
+                    <li><a href="vietnam.html">Vietnamese</a></li>
+                    <li><a href="western.html">Western</a></li>
+                    <li><a href="random.html">Daily Suggestion</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a id="login-link" href="login.html">Login</a></li> 
+                </ul>
+            </nav>
+    
+            <class class="share">
+                <a href="https://www.facebook.com/FoodNetwork/" class="fab fa-facebook-f"></a>
+                <a href="mailto:josephlyzh@1utar.my" class="fas fa-envelope"></a>
+                <a href="https://www.instagram.com/FoodNetwork/" class="fab fa-instagram"></a>
+            </class>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="images/Restaurant food cinematic video advertisement.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+        <h1>Explore More Korean Food</h1>
+        <a href="#one">Start Explore</a>
+        <br>
+        <br>
+        </div>
+    </div>
+
+
+    
+
+<div style="text-align:center; color: darkorange; background:rgba(128,128,128,0.532); margin: 50px;  border-radius: 25px; background-color: rgba(128,128,128,0.532); margin: 120px; border-radius:25px;">
+    
+    <br>
+    <br>
+    <br>
+    Korean food is a dynamic and flavorful cuisine that has gained international recognition for its rich <br>
+    culinary heritage. Rooted in centuries-old traditions, Korean cuisine is characterized by its use of <br>
+    fermented foods, bold spices, and a harmonious balance of flavors. From the savory depth of kimchi <br>
+    to the smoky sweetness of bulgogi, Korean food offers a unique blend of tastes that reflect the <br>
+    country’s diverse landscapes and cultural practices. With an emphasis on fresh ingredients and <br>
+    communal dining, Korean cuisine is not only about nourishment but also about bringing people together.<br>
+    
+    <br>
+    <br>
+    <br>
+</div>
+
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column" id="one">
+        <img src="images/bibimbapKorean.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Bibimbap (Korean Rice Bowl)</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Bibimbap, sometimes romanized as bi bim bap or bi bim bop, is a Korean rice dish. 
+            The term bibim means "mixing" and bap is cooked rice. It is served as a bowl of warm 
+            white rice topped with namul and gochujang. 
+            Egg and sliced meat are common additions, stirred together thoroughly just before eating.
+            <br>
+            <br>
+            Bibimbap can be various kinds of bibimbap depending on the ingredients. Vegetables commonly
+             used in bibimbap include julienned oi (cucumber), aehobak (courgette/zucchini), mu (radish),
+              mushrooms, doraji (bellflower root), and gim, as well as spinach, soybean sprouts, and gosari
+               (bracken fern stems). Dubu (tofu), either plain or sautéed, or a leaf of lettuce may be added,
+                or chicken or seafood may be substituted for beef. For visual appeal, the vegetables are often
+                 placed so adjacent colors complement each other. In the South Korean version, sesame oil,
+                  red pepper paste (gochujang), and sesame seeds are added.
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+    <div class="nothing">
+        
+        <p>
+            Japchae is a savory and slightly sweet dish of stir-fried glass noodles and vegetables that is popular in Korean cuisine.
+            <br>
+            <br>
+            Japchae – the bright, colourful Korean noodle dish made with an abundance of vegetables,
+             juicy bits of marinated beef and a sesame-forward dressing. Made with sweet potato noodles
+              which have a unique slippery, chewy texture, this is sort of a stir fry, sort of a noodle salad, and 100% YUM!
+            <br>
+            <br>
+            Japchae is a famous Korean noodle dish that I describe as sort of a stir fry, sort of a salad. It’s a cross between
+             the two in my mind because stir fried vegetables are tossed with noodles and sauce in a bowl rather than on the stove,
+              and served barely warm.
+            <br>
+            <br>
+            You start by mixing the sauce in a giant bowl, then pile all the ingredients in one after the other – the noodles, a giant
+             mound of cooked vegetables then lastly the seared marinated beef. Then finally, you give it a big toss to mix it all together
+              in the bowl. This part is really satisfying, getting really stuck into it! (Just make sure you use a really big bowl else
+               you’ll be cursing!).
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/japchaeKorean.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Japchae</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column">
+        <img src="images/kan poong gi.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Kkanpunggi</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Kkanpunggi is spicy garlic fried chicken stir-fried with vegetables and a sweet, sour, spicy sauce. Its a Korean Chinese dish, 
+            originating in China but modified to suit Korean tastes, with Korean ingredients.
+            <br>
+            <br>
+            Spicy garlic fried chicken is a Chinese dish that was adopted by Koreans, just like
+             Black Bean Noodles (Jajangmyeon) and Sweet and Sour Pork (Tangsuyuk) among other things. While
+              the condiments are pretty much the same in Asian countries, what sets the Korean version apart
+               is that we like it crispy even after coating the chicken in the sauce.
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;"">
+
+    <div class="nothing">
+        
+        <p>
+            Kimchi is a traditional Korean side dish consisting of salted and fermented vegetables, most often napa cabbage or Korean radish. 
+            A wide selection of seasonings is used, including 
+            gochugaru, spring onions, garlic, ginger, and jeotgal. Kimchi is also used in a variety of soups and stews.
+            Kimchi is a staple food in Korean cuisine and is eaten as a side dish with almost every Korean meal.
+            <br>
+            <br>
+            There are hundreds of different types of kimchi made with different vegetables as the main ingredients.
+             Traditionally, winter kimchi, called gimjang, was stored in large earthenware fermentation vessels, called onggi,
+              in the ground to prevent freezing during the winter months and to keep it cool enough to slow down the
+               fermentation process during summer months. The vessels are also kept outdoors in special terraces
+                called jangdokdae. In contemporary times, household kimchi refrigerators are more commonly used.
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/kimchiKorean.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Kimchi</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column">
+        <img src="images/sundubuJjigaeKorean.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Sundubu-jjigae</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Sundubu-jjigae is a jjigae in Korean cuisine. The dish is made with freshly curdled extra soft tofu which has not been strained and 
+            pressed, vegetables, sometimes mushrooms, onion, optional seafood, optional meat, and gochujang or gochugaru.
+            The dish is assembled and cooked directly in the serving vessel, which is traditionally made of thick, robust porcelain, but
+             can also be ground out of solid stone. A raw egg can be put in the jjigae just before serving, and the dish is delivered
+              while bubbling vigorously. It is typically eaten with a bowl of cooked white rice and several banchan.
+            <br>
+            <br>
+            Extra soft tofu, called sundubu in Korean, is softer than other types of tofu and is usually sold in tubes.
+             The first iteration of sundubu was discovered by a Joseon civil official who used spring water and sea 
+             water during its cooking process. The stew has multiple variations from various counties in South Korea. 
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+    <div class="nothing">
+        
+        <p>
+            Tteokbokki, or simmered rice cake, is a popular Korean food made from small-sized garae-tteok called tteokmyeon or 
+            commonly tteokbokki-tteok. Eomuk, boiled eggs, and scallions are some common ingredients paired with tteokbokki in dishes.
+            It can be seasoned with either spicy gochujang (chili paste) or non-spicy ganjang (soy sauce)-based sauce; the former is 
+            the most common form, while the latter is less common and sometimes called gungjung-tteokbokki (royal court tteokbokki). 
+            <br>
+            <br>
+            Today, variations also include curry-tteokbokki, cream sauce-tteokbokki, jajang-tteokbokki, seafood-tteokbokki, rose-tteokbokki,
+             galbi-tteokbokki and so on. Tteokbokki is commonly purchased and eaten at bunsikjip (snack bars) as well as pojangmacha
+              (street stalls). There are also dedicated restaurants for tteokbokki, where it is referred to as jeukseok tteokbokki
+               (impromptu tteokbokki). It is also a popular home dish, as the garae-tteok can be purchased in pre-packaged, semi-dehydrated form. 
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/tteokbokki.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Tteok-bokki</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column">
+        <img src="images/bulgogi2.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Bulgogi</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Bulgogi is a gui made of thin, marinated slices of meat, most commonly beef, grilled on a barbecue or on a stove-top griddle. It is also often stir-fried in a pan in home cooking. Sirloin and rib eye are frequently used cuts of beef for the dish.
+            Bulgogi is a very popular dish in South Korea, where it can be found anywhere from upscale restaurants to local supermarkets as pan-ready kits.
+            <br>
+            <br>
+            
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+    <div class="nothing">
+        
+        <p>
+            Samgyeopsal, samgyeopsal-gui, or grilled pork belly is a type of gui in Korean cuisine. 
+            <br>
+            <br>
+            Thick, fatty slices of pork belly, sometimes with the skin left on and sometimes scored
+             on the diagonal, are grilled on a slanted metal griddle or a gridiron at the diners' table,
+              inset with charcoal grills or convex gas burners. Usually, diners grill the meat themselves,
+               flipping and cutting them with tongs and scissors, and eat directly from the grill.
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/samgyeopsal.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Samgyeopsal</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    
+    <div class="column">
+        <img src="images/kimchijjigae.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Bulgogi</b></i></p>
+    </div>
+    <div class="nothing">
+        <p>Kimchi-jjigae or kimchi stew is a jjigae, or stew-like Korean dish, made with kimchi and other ingredients, such as pork, scallions, onions, and diced tofu. It is one of the most common stews in Korean cuisine.
+            <br>
+            <br>
+            Kimchi's flavor as an ingredient becomes stronger and more complex as it ages.
+             As a result, kimchi-jjigae is often cooked using older, more fermented, and "riper" kimchi,
+              which has a much more pronounced flavor and contains higher amounts of probiotics.
+               (Living bacteria in fresh, uncooked kimchi will not survive the cooking process.)
+                As kimchi is the core ingredient in kimchi-jjigae, other ingredients are dependent on personal preference. 
+        </p>
+    </div>
+    
+</div>
+
+<div class="row" style="background-image: url(images/testpic.jpg); background-repeat: no-repeat; background-size: 100%; background-position: center;">
+
+    <div class="nothing">
+        
+        <p>
+            Gimbap, also romanized as kimbap, is a Korean dish made from cooked rice, vegetables, fish, and meat rolled in gim—dried sheets of seaweed—and served in bite-sized slices. The origins of gimbap are debated.
+            Some sources suggest it originates from Japanese norimaki, introduced during Japanese colonial rule,
+             while others argue it is a modernized version of bokssam from the Joseon era.
+              The dish is often part of a packed meal, or dosirak, to be eaten at picnics and outdoor events,
+               and can serve as a light lunch along with danmuji (yellow pickled radish) and kimchi.
+                It is a popular takeaway food in South Korea and abroad[7] and is known as a convenient food because of its portability. 
+            <br>
+            <br>
+            
+        </p>
+    </div>
+    <div class="column">
+        <img src="images/gimbap.jpeg" alt="Snow" style="width:100%; height: 80%; border-radius: 15px;" >
+        <p><i><b>Gimbap</b></i></p>
+    </div>
+    
+    
+</div>
+
+<div style="text-align:center; color: orangered; background-color: rgba(128,128,128,0.532); margin: 120px; border-radius:25px;">
+    <br>
+    <br>
+    <br>
+    Korean food is more than just a collection of dishes; it is a reflection of Korea’s history, culture, and <br>
+    way of life. With its vibrant flavors, emphasis on healthful ingredients, and deep-rooted traditions, <br>
+    Korean cuisine offers a rich and satisfying culinary experience. Whether through the comforting <br>
+    warmth of a bowl of bibimbap or the fiery kick of kimchi, Korean food invites people to explore a <br>
+    world where taste, tradition, and community come together in every meal. As it continues to evolve <br>
+    and gain global popularity, Korean cuisine remains a delicious testament to the enduring spirit of its people.<br>
+    <br>
+    <br>
+    <br>
+</div>
+
+ <div>   
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+ </div>
+ </body>
+
+ <section class="footer">
+
+    <!-- <img src="images/shape-top.png" alt=""> -->
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3 class="heading"> <span>team members</span> </h3>
+            <a href="aboutus.html">Joseph Lau Yi Zhe</a>
+            <a href="aboutus.html">Tan Xin Sheng</a>
+            <a href="aboutus.html">Kok Tze Kang</a>
+            <a href="aboutus.html">Tan Hong Jie</a>
+        </div>
+
+
+        <div class="box">
+            <h3 class="heading"> <span>Acknowledgement</span> </h3>
+            <p class="copyRightCompany">Copyright © 2024 Zootopia Sdn. Bhd. </p>
+        </div>
+
+        <div class="box">
+            <h3 class="heading" id=""contact> <span>contact us</span> </h3>
+            <p> <i class="fas fa-map-marker-alt"></i> 12A, Persiaran Mawar 1, Taman Tunas Jaya, 31350 Ipoh, Perak, Malaysia</p>
+            <p> <i class="fas fa-phone"></i> +6016-2208120 </p>
+        </div>
+
+        <div class="box">
+            <h3 class="heading"> <span>Location</span> </h3>
+            <iframe id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.3448351768534!2d72.8194324144256!3d19.136377055045728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7ddc82073d7%3A0x3aa5a7ce31b7b9dd!2sRestaurants!5e0!3m2!1sen!2sin!4v1612270030599!5m2!1sen!2sin"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="aboutus.js"></script>
+
+    
+</html>

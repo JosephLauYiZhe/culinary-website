@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Cuisine</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/thai.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <!-- website icon and search -->
+        <div class="header-1">
+            <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Foodtopia</a>
+            <i class="fas fa-search" id="search-icon"></i>
+            <form action="" id="search-form">
+                <input type="search" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+                <i class="fas fa-times" id="close"></i>
+            </form>
+        </div>
+    
+        <!-- navigation bar and social media plug ins -->
+        <div class="header-2">
+            <div id="menu" class="fas fa-hamburger"></div>
+    
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="myfood.html">Malaysian</a></li>
+                    <li><a class="active" href="thai.html">Thai</a></li>
+                    <li><a href="japanesefood.html">Japanese</a></li>
+                    <li><a href="korean.html">Korean</a></li>
+                    <li><a href="vietnam.html">Vietnamese</a></li>
+                    <li><a href="western.html">Western</a></li>
+                    <li><a href="random.html">Daily Suggestion</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a id="login-link" href="login.html">Login</a></li> 
+                </ul>
+            </nav>
+    
+            <class class="share">
+                <a href="https://www.facebook.com/FoodNetwork/" class="fab fa-facebook-f"></a>
+                <a href="mailto:josephlyzh@1utar.my" class="fas fa-envelope"></a>
+                <a href="https://www.instagram.com/FoodNetwork/" class="fab fa-instagram"></a>
+            </class>
+        </div>
+    </header>
+
+
+    
+    
+    <main>
+        <div id="thai-food-container" class="food-container">
+            <!-- Thai food items will be inserted here, using getElementById()-->
+        </div>
+        
+        <!-- Specific Food details -->
+        <div id="food-detail" class="food-detail" style="display: none;">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <img id="food-detail-image" src="" alt="Food Image" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 id="food-detail-name"></h2>
+                        <p id="food-detail-category"></p>
+                        <ul id="food-detail-ingredients"></ul>
+                        <p id="food-detail-instructions"></p>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="ratio ratio-16x9">
+                            <iframe id="food-detail-video" src="" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- back button -->
+                <div class="text-center mt-4">
+                    <button id="back-button" class="btn btn-secondary">Back to Thai Food</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3 class="heading"> <span>team members</span> </h3>
+                <a href="aboutus.html">Joseph Lau Yi Zhe</a>
+                <a href="aboutus.html">Tan Xin Sheng</a>
+                <a href="aboutus.html">Kok Tze Kang</a>
+                <a href="aboutus.html">Tan Hong Jie</a>
+            </div>
+
+
+            <div class="box">
+                <h3 class="heading"> <span>Acknowledgement</span> </h3>
+                <p class="copyRightCompany">Copyright © 2024 Footopia Sdn. Bhd. </p>
+            </div>
+
+            <div class="box">
+                <h3 class="heading" id=""contact> <span>contact us</span> </h3>
+                <p> <i class="fas fa-map-marker-alt"></i> 12A, Persiaran Mawar 1, Taman Tunas Jaya, 31350 Ipoh, Perak, Malaysia</p>
+                <p> <i class="fas fa-phone"></i> +6016-2208120 </p>
+            </div>
+
+            <div class="box">
+                <h3 class="heading"> <span>Location</span> </h3>
+                <iframe id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.094406034352!2d101.1150107752135!3d4.57706334271649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31caedcac129293f%3A0x264e470cd9c853f2!2s12%2C%20Persiaran%20Mawar%201%2C%20Kampung%20Sungai%20Rokam%2C%2031350%20Ipoh%2C%20Perak%2C%20Malaysia!5e0!3m2!1sen!2sin!4v1723972428049!5m2!1sen!2sin"
+                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+    </section>
+
+    <!-- Load jQuery first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Load Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+
+    <!-- Other JS scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/thai.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

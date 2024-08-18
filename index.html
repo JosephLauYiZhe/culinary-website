@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodtopia</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- website icon and search -->
+        <div class="header-1">
+            <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Foodtopia</a>
+            <i class="fas fa-search" id="search-icon"></i>
+            <form action="" id="search-form">
+                <input type="search" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+                <i class="fas fa-times" id="close"></i>
+            </form>
+        </div>
+    
+        <!-- navigation bar and social media plug ins -->
+        <div class="header-2">
+            <div id="menu" class="fas fa-hamburger"></div>
+    
+            <nav class="navbar">
+                <ul>
+                    <li><a class="active" href="index.html">home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="myfood.html">Malaysian</a></li>
+                    <li><a href="thai.html">Thai</a></li>
+                    <li><a href="japanesefood.html">Japanese</a></li>
+                    <li><a href="korean.html">Korean</a></li>
+                    <li><a href="vietnam.html">Vietnamese</a></li>
+                    <li><a href="western.html">Western</a></li>
+                    <li><a href="random.html">Daily Suggestion</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a id="login-link" href="login.html">Login</a></li> 
+                </ul>
+            </nav>
+    
+            <class class="share">
+                <a href="https://www.facebook.com/FoodNetwork/" class="fab fa-facebook-f"></a>
+                <a href="mailto:josephlyzh@1utar.my" class="fas fa-envelope"></a>
+                <a href="https://www.instagram.com/FoodNetwork/" class="fab fa-instagram"></a>
+            </class>
+        </div>
+    </header>
+    
+    <!-- first section: videos display to catch attention -->
+
+    <section class="videos" id="videos">
+
+        <div class="video-container">
+            <div class="video">
+                <video src="images/vid7.mp4" loop autoplay muted></video>
+            </div>
+            <div class="video">
+                <video src="images/vid2.mp4" loop autoplay muted></video>
+            </div>
+            <div class="video">
+                <video src="images/vid3.mp4" loop autoplay muted></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- second section: about us -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span> About us </span> </h1>
+
+        <div class="row">
+
+            <div class="content">
+                <h3>A Global Culinary Adventure Awaitss</h3>
+                <p>Welcome to Zootopia, your comprehensive online resource for exploring the world of food. Our
+                    mission is to provide a platform where food enthusiasts can discover, learn, and share their passion
+                    for culinary delights.</p>
+                <p>From the bustling street food markets of Asia to the refined kitchens of Europe, we delve into the
+                    rich tapestry of global cuisine. Explore our extensive database of recipes, ingredients, cooking
+                    techniques, and cultural food traditions.</p>
+                <p>Whether you're a seasoned home cook or a curious food explorer, we invite you to embark on a culinary
+                    adventure with us.</p>
+                <a href="aboutus.html"><button class="btn">Learn more</button></a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- third section: food quotes swiper slide-->
+
+    <section class="quote" id="quote">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <h3>"One cannot think well, love well, sleep well, if one has not dined well."</h3>
+                        <p>- Virginia Wolf</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/home-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <h3>"First we eat, then we do everything else."</h3>
+                        <p> - M.F.K. Fisher</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/home-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <h3>"Let food be thy medicine and medicine be thy food."</h3>
+                        <p>- Hippocratese</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/home-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- fourth section: international cuisine directory -->
+
+    <section class="Cuisines" id="Cuisines">
+
+        <h1 class="heading"> <span> Explore culinaries across the world! </span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/malaysia.jpg" alt="">
+                <div class="info">
+                    <br><br>
+                    <a href="myfood.html"><button class="btn"> Malaysia </button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/jap.jpg" alt="">
+                <div class="info">
+                    <br><br>
+                    <a href="JapaneseFoodCode/japanesefood.html"><button class="btn"> Japan </button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/west.jpg" alt="">
+                <div class="info">
+                    <br><br>
+                    <a href="western.html"><button class="btn"> Western </button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/vietnam.jpg" alt="">
+                <div class="info">
+                    <br><br>
+                    <a href="vietnam.html"><button class="btn"> Vietnam </button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- fifth section: upcoming members country -->
+
+    <section class="member" id="member">
+
+        <h1 class="heading"> <span> Upcoming </span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/italian.jpg" alt="">
+                <div class="info">
+                    <h3>Italy</h3>
+                    <span>Rich, Pasty, Savory</span>
+                    <div class="share">
+                        <p>Pizza, Pasta, Gelato</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/china.jpg" alt="">
+                <div class="info">
+                    <h3>China</h3>
+                    <span>Diverse, Flavorful, Spicy</span>
+                    <div class="share">
+                        <p>Dim sum, Peking Duck, Mapo Tofu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/arabic.jpg" alt="">
+                <div class="info">
+                    <h3>Arabic</h3>
+                    <span>Aromatic, Meaty, Sweet</span>
+                    <div class="share">
+                        <p>Hummus, Kebabs, Baklava</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/eng.jpg" alt="">
+                <div class="info">
+                    <h3>English</h3>
+                    <span>Hearty, Traditional, Comforting</span>
+                    <div class="share">
+                        <p>Fish and Chips, Shepherd's Pie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sixth section: review -->
+
+    <section class="order" id="order">
+
+        <h1 class="heading"> <span> Tell us your thoughts about this website </span> </h1>
+
+        <form method ="post" action="www.foodtopia.com" id = "form1">
+
+            <div class="inputBox">
+                <select name="" id="">
+                    <option value="gender" disabled selected>gender</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+                <input type="text" placeholder="your name">
+            </div>
+
+            <div class="inputBox">
+                <input type="number" placeholder="phone number">
+                <input type="email" name="Email" placeholder="Email ID">
+            </div>
+
+            <div class="inputBox">
+                <textarea cols="30" rows="10" placeholder="Write your review"></textarea>
+            </div>
+
+            <input type="submit" value="submit" class="btn">
+
+        </form>
+
+    </section>
+
+    <!-- seventh section: subscribe -->
+
+    <section class="newsletter">
+
+        <h1>Join our family!</h1>
+        <p>subscribe to receive latest updates</p>
+        <form action="">
+            <input type="email" placeholder="enter your email">
+            <input type="submit" value="subscribe">
+        </form>
+
+    </section>
+
+    <!-- footer section -->
+    
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3 class="heading"> <span>team members</span> </h3>
+                <a href="aboutus.html">Joseph Lau Yi Zhe</a>
+                <a href="aboutus.html">Tan Xin Sheng</a>
+                <a href="aboutus.html">Kok Tze Kang</a>
+                <a href="aboutus.html">Tan Hong Jie</a>
+            </div>
+
+
+            <div class="box">
+                <h3 class="heading"> <span>Acknowledgement</span> </h3>
+                <p class="copyRightCompany">Copyright © 2024 Footopia Sdn. Bhd. </p>
+            </div>
+
+            <div class="box">
+                <h3 class="heading" id=""contact> <span>contact us</span> </h3>
+                <p> <i class="fas fa-map-marker-alt"></i> 12A, Persiaran Mawar 1, Taman Tunas Jaya, 31350 Ipoh, Perak, Malaysia</p>
+                <p> <i class="fas fa-phone"></i> +6016-2208120 </p>
+            </div>
+
+            <div class="box">
+                <h3 class="heading"> <span>Location</span> </h3>
+                <iframe id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.094406034352!2d101.1150107752135!3d4.57706334271649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31caedcac129293f%3A0x264e470cd9c853f2!2s12%2C%20Persiaran%20Mawar%201%2C%20Kampung%20Sungai%20Rokam%2C%2031350%20Ipoh%2C%20Perak%2C%20Malaysia!5e0!3m2!1sen!2sin!4v1723972428049!5m2!1sen!2sin"
+                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
