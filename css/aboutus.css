@@ -1,0 +1,388 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center cards horizontally */
+}
+
+h2 {
+    font-size: 4em;
+    /* Larger font size for emphasis */
+    margin-bottom: 27px;
+    /* Space below heading */
+    color: #333;
+    /* Dark color for the heading */
+    font-weight: 750;
+    /* Bold text */
+    letter-spacing: 1px;
+    /* Slightly spaced letters */
+}
+
+.column {
+    float: left;
+    width: 24%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    position: relative;
+    /* Ensure positioning for the child elements */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    border: none;
+    overflow: hidden;
+    width: 300px;
+    height: 590px;
+    max-width: 100%;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    justify-content: center;
+    padding-bottom: 30px;
+    /* Add padding to ensure space for the message */
+
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.message {
+    position: absolute;
+    font-size: 1.2em;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .message {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-body h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.card-body .title {
+    font-size: 1.3em;
+    color: grey;
+}
+
+.card-body p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.about-text .hide {
+    display: none;
+    /* Hide additional paragraphs initially */
+}
+/* Existing CSS for .row, .column, .card, and other elements */
+
+.card-container {
+position: relative;
+display: inline-block;
+margin: 8px;
+width: 340px;  /* Adjust the width as needed */
+height: 650px; /* Adjust the height as needed */
+}
+
+/* Dimming effect for non-hovered cards */
+.row:hover .card-container .card {
+opacity: 0.3;
+transform: scale(0.95);
+}
+
+/* Highlight the hovered card */
+.row:hover .card-container:hover .card {
+opacity: 1;
+transform: scale(1.05);
+}
+
+.card {
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 9px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 90%;
+    font-size: 1.7em;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    /* Space between text and button */
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section:hover .about-content {
+    animation: slideInUp 1s ease-out;
+}
+
+
+/* Container for the About Us section */
+.about-container {
+    display: flex;
+    justify-content: center;
+    /* Center the section horizontally */
+    padding: 80px 20px;
+    /* Add generous padding around the container */
+    background-image: url(../images/image.png);
+    /* Update the path to the image in the 'images' folder */
+    overflow: hidden;
+    /* Ensure no overflow from background image */
+}
+
+/* Styling for the About Us section */
+.about-section {
+    position: relative;
+    max-width: 900px;
+    /* Wider section */
+    width: 100%;
+    /* Ensure it takes full width up to max-width */
+    background: #ffffff;
+    /* White background for the section */
+    padding: 40px;
+    /* Inner spacing */
+    border-radius: 20px;
+    /* More rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    /* Deep shadow for contrast */
+    text-align: center;
+    /* Center the text */
+    overflow: hidden;
+    /* Hide any overflow */
+    z-index: 1;
+    /* Ensure it's above other elements */
+}
+
+.about-section:hover {
+    .about-content {
+        position: relative;
+        z-index: 1;
+        animation: slideInUp 1s ease-out;
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section h1 {
+    animation: fadeIn 1s ease-out;
+}
+
+.about-section p {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.about-section h1,
+.about-section p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Decorative elements */
+.about-section:before,
+.about-section:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 150px;
+
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    /* Ensure it doesn't interfere with other elements */
+    z-index: 0;
+}
+
+.about-section:before {
+    top: -100px;
+    /* Position above the section */
+}
+
+.about-section:after {
+    bottom: -100px;
+    /* Position below the section */
+}
+
+/* Content wrapper for added styling */
+.about-content {
+    position: relative;
+    z-index: 1;
+    /* Ensure content is above decorative elements */
+}
+
+/* Heading styling */
+.about-section h1 {
+    font-size: 4em;
+    /* Larger font size for emphasis */
+    margin-bottom: 25px;
+    /* Space below heading */
+    color: #333;
+    /* Dark color for the heading */
+    font-weight: 750;
+    /* Bold text */
+    letter-spacing: 1px;
+    /* Slightly spaced letters */
+}
+
+/* Paragraph styling */
+.about-section p {
+    font-size: 1.6em;
+    /* Larger font size for readability */
+    color: #666;
+    /* Medium gray color for text */
+    margin-bottom: 20px;
+    /* Space below paragraphs */
+    line-height: 1.6;
+    /* Increased line height for readability */
+    text-align: left;
+}
+
+.logo-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    position: relative;
+    animation: pulse 9s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* Increase font size for the specified text */
+.welcome-text {
+font-size: 2em; /* Adjust the size as needed */
+}
+
+.offer-text {
+font-size: 2em; /* Adjust the size as needed */
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .column {
+        width: 50%;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}

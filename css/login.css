@@ -1,0 +1,196 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    background-image: url(../images/images3.jpeg);
+    background-size: cover;
+    background-position: 40% center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animation for entering the form container */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for exiting the form container */
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.form-container {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.form-container.hidden {
+    animation: fadeOutDown 0.5s ease-out;
+    display: none;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 150px auto;
+    padding: 60px;
+    border-radius: 12px;
+
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+.form-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-container h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease;
+    text-transform: none;
+    /* Prevent automatic capitalization */
+}
+
+
+.form-control:focus {
+    border-color: #007bff;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+    /* Ensure outline is removed */
+}
+
+.btn:focus,
+.btn:active,
+.btn:focus,
+.btn:focus-visible {
+    outline: none;
+    /* Remove any focus outline */
+    box-shadow: none;
+    /* Remove any focus shadow */
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background: #28a745;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-success:hover {
+    background: #1e7e34;
+    transform: scale(1.05);
+}
+
+
+.btn-link {
+    background: none;
+    color: #007bff;
+    font-size: 14px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    /* Remove default focus outline */
+}
+
+.btn-link:focus,
+.btn-link:active,
+.btn-link:focus-visible {
+    outline: none;
+    /* Remove any focus outline */
+    box-shadow: none;
+    /* Remove any focus shadow */
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+    /* You can add other styles here if needed */
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error {
+    color: #dc3545;
+    margin-top: 10px;
+    font-size: 14px;
+    display: none;
+}
+
+.error.visible {
+    display: block;
+}

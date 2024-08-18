@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+/* Apply the Lora font to the entire body */
+        /* Apply the Lora font to the entire body */
+        body {
+            font-family: 'Lora', serif;
+        }
+
+        /* Custom styles for vertical dish display with image and name side by side */
+        .section {
+            position: relative;
+            background-image: url(../images/background.jpg);
+            background-size: cover;
+            background-position: 60% center;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            padding: 20px;
+        }
+
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Black overlay with 50% opacity */
+            z-index: 1;
+            /* Ensure overlay is above background but below content */
+        }
+
+        .section .container {
+            position: relative;
+            z-index: 2;
+            /* Ensure content is above the overlay */
+        }
+
+        /* New header style for the Japanese Cuisine section */
+        .western-cuisine-header {
+            background-image: url(../images/western.jpg);
+            background-size: cover;
+            /* Cover the entire section */
+            background-position: center;
+            /* Center the background image */
+            background-repeat: no-repeat;
+            /* Prevent repeating of the background image */
+            background-attachment: scroll;
+            /* Image scrolls with the content */
+            position: relative;
+            /* Position relative to place the overlay */
+            padding: 50px;
+            text-align: center;
+        }
+
+        .western-cuisine-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            /* Dark overlay with 60% opacity */
+            z-index: 1;
+            /* Ensure overlay is above the background image but below the content */
+        }
+
+        .western-cuisine-header h2 {
+            font-size: 7rem;
+            margin: 0;
+            color: white;
+            font-weight: bold;
+            /* Ensure text is visible */
+            position: relative;
+            /* Position text above the overlay */
+            z-index: 2;
+            /* Ensure text is above the overlay */
+        }
+
+        .western-cuisine-header .subtitle {
+            font-size: 1.7em;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 #000,
+                /* Horizontal offset, vertical offset, blur radius, and color */
+                -1px -1px 0 #000,
+                /* Horizontal offset, vertical offset, blur radius, and color */
+                1px -1px 0 #000,
+                -1px 1px 0 #000;
+        }
+
+        .western-cuisine {
+            background-color: #f8f9fa;
+        }
+
+        .dish {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            /* Add transition effect */
+        }
+
+        .dish img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Add transition effect for scaling and shadow */
+        }
+
+        .dish img:hover {
+            transform: scale(1.05);
+            /* Slightly enlarge the image on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            /* Add a shadow effect on hover */
+        }
+
+        .dish .content {
+            max-width: calc(100% - 340px);
+        }
+
+        .dish h5 {
+            margin: 0 0 10px 0;
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+        }
+
+        .dish p {
+            margin: 0;
+            font-size: 1.6rem;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .get-recipe-btn {
+            margin-top: 10px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            /* Transition effects */
+        }
+
+        .get-recipe-btn:hover {
+            background-color: #e05e52;
+            transform: scale(1.2);
+            /* Slightly enlarge the button on hover */
+        }
+
+        header,
+        footer {
+            font-family: 'Lora', serif;
+        }
+
+
+        /* Base styles for the recipe details modal */
+        .recipe-details {
+            display: none;
+            opacity: 0;
+            transform: translateY(-20px);
+            /* Start with the modal slightly above its final position */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            /* Transition for opacity and transform */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateY(-20px);
+            /* Center and apply initial translate */
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            max-width: 90vw;
+            /* Ensure the modal doesn't overflow the viewport */
+            max-height: 80vh;
+            /* Limit height to prevent overflow */
+            overflow-y: auto;
+            /* Add scroll if content overflows */
+            box-sizing: border-box;
+            /* Ensure padding is included in total width/height */
+        }
+
+        /* Show animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) translateY(-20px);
+                /* Start position */
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) translateY(0);
+                /* End position */
+            }
+        }
+
+        /* Hide animation */
+        @keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                transform: translate(-50%, -50%) translateY(0);
+                /* Start position */
+            }
+
+            to {
+                opacity: 0;
+                transform: translate(-50%, -50%) translateY(20px);
+                /* End position */
+            }
+        }
+
+        /* Class to add animation for showing the modal */
+        .recipe-details.show {
+            display: block;
+            animation: fadeInUp 0.3s ease forwards;
+        }
+
+        /* Class to add animation for hiding the modal */
+        .recipe-details.hide {
+            animation: fadeOutDown 0.3s ease forwards;
+        }
+
+
+
+        .recipe-details h3 {
+            margin-top: 0;
+            font-size: 2rem;
+            /* Recipe title */
+            font-weight: bold;
+            /* Make food name bold */
+        }
+
+        .recipe-details p {
+            font-size: 1.4rem;
+            /* Instructions */
+            line-height: 1.6;
+            /* Adjust line-height for readability */
+        }
+
+        .recipe-details h4 {
+            font-size: 1.6rem;
+            /* Ingredients heading */
+            margin-top: 20px;
+        }
+
+        .recipe-details ul {
+            font-size: 1.4rem;
+            /* Ingredients list */
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+
+        .recipe-details button {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            /* Button padding */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            /* Button font size */
+            margin-top: 20px;
+        }
+
+        .recipe-details button:hover {
+            background: #e05e52;
+        }
+
+        .recipe-details .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            /* Increase font size for better visibility */
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #333;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:768px){
+
+    .video-container {
+        flex-direction: column;
+    }
+
+    .video {
+        max-width: 100%;
+    }
+
+    html{
+        font-size: 55%;
+    }
+
+    #search-form #search-box{
+        width:90%;
+        margin:0 1rem;
+    }
+
+    header .header-2 #menu{
+        display: block;
+    }
+
+    header .header-2 .navbar{
+        position: absolute;
+        top:100%; left: -120%;
+    }
+
+    header .header-2 .navbar ul{
+        flex-flow: column;
+        justify-content: center;
+        min-height: calc(100vh - 6rem);
+        padding-bottom: 6rem;
+        background:#000;
+        width: 32rem;
+    }
+
+    header .header-2 .navbar ul li{
+        width: 100%;
+        text-align: center;
+    }
+
+    header .header-2 .navbar ul li a{
+        font-size: 2.7rem;
+        display: block;
+    }
+
+    header .header-2 .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .header-2 .nav-toggle{
+        left:0;
+    }
+
+    .quote .content h1{
+        font-size: 5rem;
+    }
+
+    .quote .content p{
+        width: auto;
+    }
+
+    .about .row{
+        flex-flow: column;
+    }
+
+    .about .row .image img{
+        width: 85%;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .order form .inputBox input,
+    .order form .inputBox select,
+    .order form .inputBox textarea,
+    .order form .inputBox #map{
+        width: 100%;
+    }
+
+}
+
+@media (max-width:400px){
+
+    html{
+        font-size: 50%;
+    }
+
+    header .header-1{
+        flex-flow: column;
+    }
+
+    header .header-1 .logo{
+        padding-bottom: 1rem;
+    }
+
+    header .header-2 .navbar ul{
+        width: 100vw;
+    }
+
+    .order form{
+        width: 95%;
+    }
+    body {
+        font-family: 'Lora', serif;
+    }
+
+    /* Custom styles for vertical dish display with image and name side by side */
+    .section {
+        position: relative;
+        background-image: url('background2.jpg');
+        background-size: cover;
+        background-position: 60% center;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        padding: 20px;
+    }
+
+    .section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        /* Black overlay with 50% opacity */
+        z-index: 1;
+        /* Ensure overlay is above background but below content */
+    }
+
+    .section .container {
+        position: relative;
+        z-index: 2;
+        /* Ensure content is above the overlay */
+    }
+
+    /* New header style for the Japanese Cuisine section */
+    .western-cuisine-header {
+        background-image: url('images/western.jpg');
+        background-size: cover;
+        /* Cover the entire section */
+        background-position: center;
+        /* Center the background image */
+        background-repeat: no-repeat;
+        /* Prevent repeating of the background image */
+        background-attachment: scroll;
+        /* Image scrolls with the content */
+        position: relative;
+        /* Position relative to place the overlay */
+        padding: 50px;
+        text-align: center;
+    }
+
+    .western-cuisine-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        /* Dark overlay with 60% opacity */
+        z-index: 1;
+        /* Ensure overlay is above the background image but below the content */
+    }
+
+    .western-cuisine-header h2 {
+        font-size: 7rem;
+        margin: 0;
+        color: white;
+        font-weight: bold;
+        /* Ensure text is visible */
+        position: relative;
+        /* Position text above the overlay */
+        z-index: 2;
+        /* Ensure text is above the overlay */
+    }
+
+    .western-cuisine-header .subtitle {
+        font-size: 1.7em;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow:
+            1px 1px 0 #000,
+            /* Horizontal offset, vertical offset, blur radius, and color */
+            -1px -1px 0 #000,
+            /* Horizontal offset, vertical offset, blur radius, and color */
+            1px -1px 0 #000,
+            -1px 1px 0 #000;
+    }
+
+    .western-cuisine {
+        background-color: #f8f9fa;
+    }
+
+    .dish {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 15px 0;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        /* Add transition effect */
+    }
+
+    .dish img {
+        width: 300px;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Add transition effect for scaling and shadow */
+    }
+
+    .dish img:hover {
+        transform: scale(1.05);
+        /* Slightly enlarge the image on hover */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        /* Add a shadow effect on hover */
+    }
+
+    .dish .content {
+        max-width: calc(100% - 340px);
+    }
+
+    .dish h5 {
+        margin: 0 0 10px 0;
+        font-size: 3.5rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: bold;
+    }
+
+    .dish p {
+        margin: 0;
+        font-size: 1.6rem;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .get-recipe-btn {
+        margin-top: 10px;
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        /* Transition effects */
+    }
+
+    .get-recipe-btn:hover {
+        background-color: #e05e52;
+        transform: scale(1.2);
+        /* Slightly enlarge the button on hover */
+    }
+
+    header,
+    footer {
+        font-family: 'Lora', serif;
+    }
+
+
+    /* Base styles for the recipe details modal */
+    .recipe-details {
+        display: none;
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Start with the modal slightly above its final position */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        /* Transition for opacity and transform */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) translateY(-20px);
+        /* Center and apply initial translate */
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        max-width: 90vw;
+        /* Ensure the modal doesn't overflow the viewport */
+        max-height: 80vh;
+        /* Limit height to prevent overflow */
+        overflow-y: auto;
+        /* Add scroll if content overflows */
+        box-sizing: border-box;
+        /* Ensure padding is included in total width/height */
+    }
+
+    /* Show animation */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -50%) translateY(-20px);
+            /* Start position */
+        }
+
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%) translateY(0);
+            /* End position */
+        }
+    }
+
+    /* Hide animation */
+    @keyframes fadeOutDown {
+        from {
+            opacity: 1;
+            transform: translate(-50%, -50%) translateY(0);
+            /* Start position */
+        }
+
+        to {
+            opacity: 0;
+            transform: translate(-50%, -50%) translateY(20px);
+            /* End position */
+        }
+    }
+
+    /* Class to add animation for showing the modal */
+    .recipe-details.show {
+        display: block;
+        animation: fadeInUp 0.3s ease forwards;
+    }
+
+    /* Class to add animation for hiding the modal */
+    .recipe-details.hide {
+        animation: fadeOutDown 0.3s ease forwards;
+    }
+
+
+
+    .recipe-details h3 {
+        margin-top: 0;
+        font-size: 2rem;
+        /* Recipe title */
+        font-weight: bold;
+        /* Make food name bold */
+    }
+
+    .recipe-details p {
+        font-size: 1.4rem;
+        /* Instructions */
+        line-height: 1.6;
+        /* Adjust line-height for readability */
+    }
+
+    .recipe-details h4 {
+        font-size: 1.6rem;
+        /* Ingredients heading */
+        margin-top: 20px;
+    }
+
+    .recipe-details ul {
+        font-size: 1.4rem;
+        /* Ingredients list */
+        line-height: 1.6;
+        padding-left: 20px;
+    }
+
+    .recipe-details button {
+        background: #ff6f61;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        /* Button padding */
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        /* Button font size */
+        margin-top: 20px;
+    }
+
+    .recipe-details button:hover {
+        background: #e05e52;
+    }
+
+    .recipe-details .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        /* Increase font size for better visibility */
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+    }
+
+}
